@@ -44,6 +44,10 @@ get_header();
 		endif;
 		?>
 
+		<h2 class="my-element"><?php the_field('gsap-test')?></h2>
+
+		<h2 class="my-element-2"><?php the_field('gsap_scrolltrigger_test')?></h2>
+
 	</main><!-- #main -->
 
 <?php
