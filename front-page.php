@@ -10,43 +10,29 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<section id="home-hero">
+			<h1>Flux</h1>
+			<p class="lead_large">Find your wavelength</p>
+			<p class="lead_medium">Info about ADHD for students</p>
+		</section>
 
-		<?php
-		if ( have_posts() ) :
+		<section class="page-intro">
+			<?php the_field('home_intro')?>
+			<div class="cta_lg">
+				<p>Scroll down to learn more about ADHD</p>
+			</div>
+		</section>
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+		<section>
+			<?php the_field('what_is_adhd')?>
+		</section>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'front-page' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		<h2 class="my-element"><?php the_field('gsap-test')?></h2>
-
-		<h2 class="my-element-2"><?php the_field('gsap_scrolltrigger_test')?></h2>
+		<!-- Show GSAP tests if checked in WP Page editor -->
+		<?php $gsap_tests = get_field('gsap_tests'); ?>
+		<?php if ($gsap_tests['show_gsap_tests']): ?>
+				<h2 class="my-element"><?php echo esc_html($gsap_tests['gsap-test'])?></h2>
+				<h2 class="my-element-2"><?php echo esc_html($gsap_tests['gsap_scrolltrigger_test'])?></h2>
+		<?php endif?>
 
 	</main><!-- #main -->
 
