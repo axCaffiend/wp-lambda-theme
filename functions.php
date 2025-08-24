@@ -143,8 +143,14 @@ function lambda_theme_scripts() {
 	wp_enqueue_style( 'lambda-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'lambda-theme-style', 'rtl', 'replace' );
 
-	// Bootstrap V5.3.3
-	wp_enqueue_style('activehub-leeds-bootstrap-5-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
+	// Bootstrap V5.3.3 CSS
+	wp_enqueue_style('lambda-theme-bootstrap-5-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
+
+	// Google Fonts
+	wp_enqueue_style('lambda-theme-google-fonts', 'https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Quicksand:wght@300..700&display=swap');
+
+	// Google Material Icons (as font)
+	wp_enqueue_style('lambda-theme-google-icons', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp');
 
 	// Custom Stylesheet
 	wp_enqueue_style('custom-style', get_template_directory_uri().'/stylesheets/custom-style.css');
@@ -154,10 +160,10 @@ function lambda_theme_scripts() {
 
 	// JQuery V3.7.1 
 	// For bootstrap-select js-plugin, may delete later if plugin not used.
-	wp_enqueue_script('activehub-leeds-jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', array(), '3.7.1', true);
+	wp_enqueue_script('lambda-theme-jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', array(), '3.7.1', true);
 
-	// Bootstrap V5.3.3
-	wp_enqueue_script('activehub-leeds-bootstrap5-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array(), '5.3.3', true);
+	// Bootstrap V5.3.3 JS
+	wp_enqueue_script('lambda-theme-bootstrap5-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array(), '5.3.3', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

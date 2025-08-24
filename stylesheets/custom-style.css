@@ -1,4 +1,213 @@
 
+/*========================================*/
+/*  ROOT VARIABLES                     */
+/*========================================*/
+:root {
+	/* Colours */
+	--colours-primary: rgba(242, 118, 108, 1.00);
+	--colours-primary-light: rgba(241, 196, 192, 1.00);
+	--colours-accent-blue: rgba(21, 181, 217, 1.00);
+	--colours-accent-yellow: rgba(243, 205, 20, 1.00);
+	--colours-accent-blue-dark: rgba(47, 120, 145, 1.00);
+	--colours-surface-light: rgba(242, 242, 242, 1.00);
+	--colours-surface-dark: rgba(13, 11, 30, 1.00);
+	--colours-surface-mid-green: rgba(184, 217, 208, 1.00);
+	--colours-surface-mid-purple: rgba(209, 206, 237, 1.00);
+	--colours-accent-blue-light: rgba(168, 228, 242, 1.00);
+	--colours-accent-yellow-light: rgba(248, 237, 178, 1.00);
+
+	/* Breakpoints - for reference*/
+	--device-widths-desktop: 1280px;
+	--device-widths-mobile: 412px;
+	--device-widths-tablet: 800px;
+
+	/* Font Families */
+	--font-primary: "Epilogue", sans-serif;
+	--font-secondary: "Quicksand", sans-serif;
+	--font-body: "Noto Sans", sans-serif;
+
+	/* Font Sizes */
+	--font-sizes-mobile-h1: 3rem;
+	--font-sizes-mobile-h2: 2.5rem;
+	--font-sizes-mobile-h3: 2rem;
+	--font-sizes-mobile-h4: 1.5rem;
+	--font-sizes-mobile-h5: 1.5rem;
+	--font-sizes-mobile-h6: 1.25rem;
+	--font-sizes-mobile-cta_large: 1.2rem;
+	--font-sizes-mobile-cta_medium: 1.12rem;
+	--font-sizes-mobile-cta_small: 1rem;
+	/* --font-sizes-mobile-lead_strong: 1.25rem; */
+	--font-sizes-mobile-lead_reg: 1.25rem;
+	/* --font-sizes-mobile-p_strong: 1rem; */
+	--font-sizes-mobile-p_reg: 1rem;
+
+}
+
+
+
+
+/*========================================*/
+/*  GENERAL STYLES                        */
+/*========================================*/
+
+body {
+	color: var(--colours-surface-dark);
+	background-color: var(--colours-surface-light);
+}
+
+section {
+	margin: 3rem auto;
+}
+
+
+.material-symbols-sharp {
+  font-variation-settings:
+	'FILL' 0,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 24;
+}
+
+
+/*-------------------------------*/
+/*	Typography          */
+/*-------------------------------*/
+
+/*-------- Defaults --------*/
+h1, h2, h3, h4, h5, h6 {
+	max-width: calc((10/12)*100vw);
+	margin: 1rem auto;
+	font-family: var(--font-primary);
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+}
+
+h1 {
+	font-size: var(--font-sizes-mobile-h1);
+}
+
+h2 {
+	font-size: var(--font-sizes-mobile-h2);
+}
+
+h3 {
+	font-size: var(--font-sizes-mobile-h3);
+}
+
+h4 {
+	font-size: var(--font-sizes-mobile-h4);
+}
+
+h5 {
+	font-size: var(--font-sizes-mobile-h5);
+}
+
+h6 {
+	font-size: var(--font-sizes-mobile-h6);
+}
+
+p {
+	max-width: calc((10/12)*100vw);
+	margin: 1rem auto;
+	font-family: var(--font-body);
+	font-size: var(--font-sizes-mobile-p_reg);
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.lead_text p {
+	font-family: var(--font-secondary);
+	font-weight: 500;
+	font-size: var(--font-sizes-mobile-lead_reg);
+}
+
+
+
+
+/*========================================*/
+/*  COMPONENTS                            */
+/*========================================*/
+.btn_base {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin: 0 auto;
+	max-width: 20rem;
+	text-align: center;
+}
+
+.btn_lg {
+	background-color: var(--colours-accent-blue);
+	padding: 1rem 1.5rem;
+	border-radius: 10rem;
+	font-family: var(--font-secondary);
+	font-size: var(--font-sizes-mobile-cta_large);
+	font-weight: 700;
+}
+
+.btn_lg .material-symbols-sharp {
+	font-size: 1.5rem;
+}
+
+/*========================================*/
+/*  PAGE SPECIFIC STYLES                  */
+/*========================================*/
+
+/*-------------------------------*/
+/*	Home page         			 */
+/*-------------------------------*/
+
+/*-------- Home Hero --------*/
+/* Animated Flux header */
+
+/* Container */
+.home-hero {
+	border: solid 1px var(--colours-surface-dark);
+	text-align: center;
+	min-height: 60vh;
+}
+
+.home-hero .strapline {
+	font-family: var(--font-primary);
+	font-size: 2rem;
+	font-weight: 800;
+}
+
+.home-hero .description {
+	font-family: var(--font-primary);
+	font-size: 1.25rem;
+	font-weight: 900;
+}
+
+
+
+
+/*========================================*/
+/*  MEDIA QUERIES                     */
+/*========================================*/
+
+/*-------------------------------*/
+/*	Desktop          			 */
+/*-------------------------------*/
+@media screen and (min-width: 1280px){
+	h1, h2, h3, h4, h5, h6 {
+		max-width: calc((8/12)*100vw);
+	}
+
+	p {
+		max-width: calc((8/12)*100vw);
+	}
+}
+
+
+
+
+/*========================================*/
+/*  TESTS (delete when finished)          */
+/*========================================*/
+
 /* ------ GSAP TESTS -------- */
 /* Styles gsap test blocks on Home page */
 .my-element {
