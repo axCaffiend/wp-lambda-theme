@@ -118,7 +118,7 @@ p {
 	line-height: normal;
 }
 
-.lead_text p {
+.lead-text, .lead-text > * {
 	font-family: var(--font-secondary);
 	font-weight: 500;
 	font-size: var(--font-sizes-mobile-lead_reg);

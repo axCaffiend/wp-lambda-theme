@@ -15,8 +15,8 @@
 	<p class="description">Info about ADHD for students</p>
 </section>
 
-<section class="page-intro text-center">
-	<div class="lead_text"><?php the_field('home_intro')?></div>
+<section class="page-intro">
+	<div class="lead-text"><?php the_field('home_intro')?></div>
 	<div class="btn_base btn_lg">
 		<span class="material-symbols-sharp">south</span>
 		<span class="btn-label">Scroll down for an intro to ADHD</span>
