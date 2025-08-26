@@ -126,6 +126,11 @@ p {
 
 h1.entry-title {
 	text-align: center;
+	padding-top: 2rem;
+}
+
+.page-intro {
+	text-align: center;
 }
 
 
@@ -393,7 +398,6 @@ h1.entry-title {
 	p {
 		max-width: calc((8/12)*100vw);
 	}
-
 
 }
 
