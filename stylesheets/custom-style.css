@@ -273,6 +273,57 @@ h1.entry-title {
 	font-weight: 700;
 }
 
+/*-------------------------------*/
+/*	Main Footer          		 */
+/*-------------------------------*/
+
+/*-------- Footer Divider --------*/
+.site-footer .footer-divider {
+	width: 100%;
+	height: 3rem;
+}
+
+.site-footer .footer-divider svg path {
+	stroke-width: 3%;
+}
+
+/*-------- Footer Content --------*/
+/* Content Container */
+.site-footer .site-info {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0 4rem;
+	gap: 1rem 6rem;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Branding */
+.site-footer .footer-branding > * {
+	margin: 0;
+}
+
+.site-footer .footer-branding {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem 2rem;
+}
+
+	/* Logo */
+.site-footer .footer-branding .footer-logo svg {
+	width: 6rem;
+	height: auto;
+}
+
+/* Copyright */
+.site-footer .copyright {
+	flex-grow: 1;
+	text-align: center;
+}
+
+
 
 /*========================================*/
 /*  PAGE SPECIFIC STYLES                  */

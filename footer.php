@@ -12,19 +12,18 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<div class="footer-divider">
+			<?php echo load_inline_svg('\assets\brand\wave-divider-mobile.svg') ?>
+		</div>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'lambda-theme' ) ); ?>">
-				<p>ADHD@Uni</p>
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'lambda-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'lambda-theme' ), 'lambda-theme', '<a href="http://underscores.me/">Anna Fulcher</a>' );
-				?>
+			<div class="footer-branding">
+				<div class="footer-logo"><?php echo load_inline_svg('\assets\brand\flux-logo.svg') ?></div>
+				<h1><?php bloginfo('name') ?></h1>
+				<p class="lead-text"><?php bloginfo('description')?></p>
+			</div>
+			<div class="copyright">
+				<p>&copy; 2025</p>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
