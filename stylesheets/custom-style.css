@@ -160,7 +160,7 @@ h1.entry-title {
 }
 
 /*-------------------------------*/
-/*	Header                       */
+/*	Main Header                  */
 /*-------------------------------*/
 .site-header {
 	display: flex;
@@ -240,14 +240,6 @@ h1.entry-title {
 	top: -2rem;
 	left: 0;
 	z-index: -1;
-}
-
-@media screen and (min-width: 800px) {
-
-	.main-navigation ul {
-		flex-flow: row wrap;
-		justify-content: flex-end;
-	}
 }
 
 .main-navigation ul li {
@@ -392,6 +384,8 @@ h1.entry-title {
 /*	Desktop          			 */
 /*-------------------------------*/
 @media screen and (min-width: 1280px){
+
+	/*-------- Typography --------*/
 	h1, h2, h3, h4, h5, h6 {
 		max-width: calc((8/12)*100vw);
 	}
