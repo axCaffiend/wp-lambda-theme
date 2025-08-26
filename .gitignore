@@ -1,2 +1,3 @@
 .stylelintrc.json
 .eslintrc
+*.ffs_db
