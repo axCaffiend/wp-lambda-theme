@@ -27,26 +27,15 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$lambda_theme_description = get_bloginfo( 'description', 'display' );
-			if ( $lambda_theme_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $lambda_theme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			<a href=<?php echo get_home_url() ?> class="site-logo"><?php echo load_inline_svg('\assets\logo\flux-logo.svg')?></a>
 		</div><!-- .site-branding -->
+		<h1 class="site-title">Flux</h1>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lambda-theme' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<span class="material-symbols-sharp">menu</span>
+				<?php esc_html_e( 'Menu', 'lambda-theme' ); ?>
+			</button>
 			<?php
 			wp_nav_menu(
 				array(

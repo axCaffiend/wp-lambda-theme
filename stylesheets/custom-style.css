@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-style: normal;
 	font-weight: 900;
 	line-height: normal;
+	color: var(--colours-surface-dark);
 }
 
 h1 {
@@ -123,12 +124,19 @@ p {
 	font-size: var(--font-sizes-mobile-lead_reg);
 }
 
+h1.entry-title {
+	text-align: center;
+}
 
 
 
 /*========================================*/
 /*  COMPONENTS                            */
 /*========================================*/
+
+/*-------------------------------*/
+/*	Buttons                      */
+/*-------------------------------*/
 .btn_base {
 	display: flex;
 	align-items: center;
@@ -151,6 +159,120 @@ p {
 	font-size: 1.5rem;
 }
 
+/*-------------------------------*/
+/*	Header                       */
+/*-------------------------------*/
+.site-header {
+	display: flex;
+	width: 100%;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0rem 0.5rem 1rem;
+	color: var(--colours-primary);
+	background-color: var(--colours-surface-dark);
+	border-radius: 0 0 1rem 1rem;
+	border: none;
+}
+
+.site-header .site-title {
+	color: var(--colours-primary);
+	margin: 0;
+}
+
+.site-header .site-branding .site-logo svg {
+	fill: var(--colours-primary);
+	width: 4rem;
+	height: 4rem;
+}
+
+.main-navigation {
+	position: relative;
+	width: auto;
+	justify-items: right;
+}
+
+.menu-toggle {
+	display: flex;
+	flex-flow: column nowrap;
+	background: transparent;
+	border: none;
+	color: var(--colours-primary);
+	font-family: var(--font-secondary);
+	font-size: 1rem;
+}
+
+.menu-toggle .material-symbols-sharp {
+	font-size: 2.5rem;
+}
+
+.main-navigation ul {
+	visibility: hidden;
+	display: flex;
+	padding: 1rem;
+	gap: 1rem;
+	flex-flow: column nowrap;
+	position: absolute;
+	align-items: center;
+	width: 100vw;
+	height: 0;
+	top: 100%;
+	right: 0;
+	left: auto;
+	/* opacity: 0%; */
+	transition: all 400ms ease-out;
+}
+
+/* Copied from style.css - Small menu, screen width < 37.5em */
+.main-navigation.toggled ul {
+	visibility: visible;
+	/* opacity: 100%; */
+	height: auto;
+	top: 110%;
+	border-radius: 0 0 1rem 1rem;
+	background-color: var(--colours-surface-dark);
+}
+
+.main-navigation.toggled ul::before {
+	content: '';
+	width: 100vw;
+	height: 2rem;
+	background-color: var(--colours-surface-dark);
+	position: absolute;
+	top: -2rem;
+	left: 0;
+	z-index: -1;
+}
+
+@media screen and (min-width: 800px) {
+
+	.main-navigation ul {
+		flex-flow: row wrap;
+		justify-content: flex-end;
+	}
+}
+
+.main-navigation ul li {
+	visibility: hidden;
+	width: fit-content;
+	background-color: var(--colours-primary);
+	border-radius: 50rem;
+	padding: 0.5rem 1rem;
+}
+
+/* Transition animate visibility - options were still showing when bg was animating, controlled with toggle in navigation.js */
+.main-navigation ul li.show-fade-in {
+	visibility: visible;
+}
+
+.main-navigation ul a {
+	color: var(--colours-surface-dark);
+	font-family: var(--font-primary);
+	font-size: var(--font-sizes-mobile-cta_medium);
+	font-weight: 700;
+}
+
+
 /*========================================*/
 /*  PAGE SPECIFIC STYLES                  */
 /*========================================*/
@@ -164,9 +286,10 @@ p {
 
 /* Container */
 .home-hero {
+	margin-top: 0;
+	min-height: 60vh;
 	border: solid 1px var(--colours-surface-dark);
 	text-align: center;
-	min-height: 60vh;
 }
 
 .home-hero .strapline {
@@ -199,6 +322,8 @@ p {
 	p {
 		max-width: calc((8/12)*100vw);
 	}
+
+
 }
 
 

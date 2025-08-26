@@ -6,6 +6,7 @@
  */
 ( function() {
 	const siteNavigation = document.getElementById( 'site-navigation' );
+	const siteNavigationOptions = document.querySelectorAll('.main-navigation ul li');
 
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
@@ -34,6 +35,10 @@
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
+		for (let el of siteNavigationOptions) {
+			console.log(el);
+			el.classList.toggle('show-fade-in')
+		}
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
