@@ -36,7 +36,6 @@
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
 		for (let el of siteNavigationOptions) {
-			console.log(el);
 			el.classList.toggle('show-fade-in')
 		}
 
@@ -54,6 +53,9 @@
 		if ( ! isClickInside ) {
 			siteNavigation.classList.remove( 'toggled' );
 			button.setAttribute( 'aria-expanded', 'false' );
+			for (let el of siteNavigationOptions) {
+				el.classList.remove('show-fade-in')
+		}
 		}
 	} );
 
