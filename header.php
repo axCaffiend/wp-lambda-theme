@@ -27,9 +27,9 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<a href=<?php echo get_home_url() ?> class="site-logo"><?php echo load_inline_svg('\assets\logo\flux-logo.svg')?></a>
+			<a href=<?php echo get_home_url() ?> class="site-logo"><?php echo load_inline_svg('\assets\brand\flux-logo.svg')?></a>
 		</div><!-- .site-branding -->
-		<h1 class="site-title">Flux</h1>
+		<h1 class="site-title"><?php bloginfo('name') ?></h1>
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
