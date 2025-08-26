@@ -1,10 +1,9 @@
-gsap.registerPlugin(ScrollTrigger);
-
 // wait until DOM is ready
 document.addEventListener("DOMContentLoaded", function(event){
 
-    console.log("DOM loaded");
-   
+    console.log("DOM loaded - running GSAP animations");
+    gsap.registerPlugin(DrawSVGPlugin,GSDevTools,MotionPathHelper,MotionPathPlugin,ScrollTrigger);
+
     //wait until images, links, fonts, stylesheets, and js is loaded
     window.addEventListener("load", function(e){
    

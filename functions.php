@@ -198,7 +198,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// GSAP
+// ---- GSAP ----
 
 // The proper way to enqueue GSAP script in WordPress
 
@@ -206,10 +206,25 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function theme_gsap_script(){
     // The core GSAP library
     wp_enqueue_script( 'gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js', array(), false, true );
+
+	// Plugins
+	// DrawSVG
+	wp_enqueue_script( 'gsap-ds', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js', array('gsap-js'), false, true );
+
+	// GSDev Tools
+	 wp_enqueue_script( 'gsap-gs', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js', array('gsap-js'), false, true );
+
     // ScrollTrigger - with gsap.js passed as a dependency
     wp_enqueue_script( 'gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js', array('gsap-js'), false, true );
+
+	// Motion Path
+	wp_enqueue_script( 'gsap-mp', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js', array('gsap-js'), false, true );
+
+	// Motion Path Helper
+	 wp_enqueue_script( 'gsap-mph', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathHelper.min.js', array('gsap-js'), false, true );
+
     // Your animation code file - with gsap.js passed as a dependency
-    wp_enqueue_script( 'gsap-js2', get_template_directory_uri() . '/js/gsap-test.js', array('gsap-js'), false, true );
+    wp_enqueue_script( 'gsap-test', get_template_directory_uri() . '/js/gsap-test.js', array('gsap-js'), false, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
