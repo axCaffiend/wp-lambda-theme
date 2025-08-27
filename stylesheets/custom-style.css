@@ -218,10 +218,11 @@ h1.entry-title {
 	gap: 1rem;
 	flex-flow: column nowrap;
 	position: absolute;
+	z-index: 999;
 	align-items: center;
 	width: 100vw;
 	height: 0;
-	top: 100%;
+	top: 110%;
 	right: 0;
 	left: auto;
 	transition: all 400ms ease-out;
@@ -231,7 +232,6 @@ h1.entry-title {
 .main-navigation.toggled ul {
 	visibility: visible;
 	height: auto;
-	top: 110%;
 	border-radius: 0 0 1rem 1rem;
 	background-color: var(--colours-surface-dark);
 }
@@ -239,12 +239,12 @@ h1.entry-title {
 .main-navigation.toggled ul::before {
 	content: '';
 	width: 100vw;
-	height: 2rem;
+	height: 1rem;
 	background-color: var(--colours-surface-dark);
 	position: absolute;
-	top: -2rem;
+	top: -1rem;
 	left: 0;
-	z-index: -1;
+	z-index: 1;
 }
 
 .main-navigation ul li {
