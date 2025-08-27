@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="home-hero-arrow" xmlns="http://www.w3.org/2000/svg" width="329.7" height="16.4" version="1.1" viewBox="0 0 329.7 16.4">
+  <!-- Generator: Adobe Illustrator 29.7.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 8)  -->
+  <rect id="bg-rect" x="-2.4" y="-71.8" width="410.4" height="160" fill="none"/>
+  <g id="arrow">
+    <line id="arrow-line" y1="8.2" x2="313.6" y2="8.2" fill="none" stroke="#0d0b1e" stroke-miterlimit="10" stroke-width="4"/>
+    <polygon id="arrow-head" points="329.7 8.2 313.6 0 313.6 16.4 329.7 8.2" fill="#0d0b1e"/>
+  </g>
+</svg>

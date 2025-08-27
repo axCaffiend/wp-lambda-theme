@@ -335,10 +335,66 @@ h1.entry-title {
 
 /* Container */
 .home-hero {
+	/* border: solid 1px red; */
 	margin-top: 0;
-	min-height: 60vh;
-	border: solid 1px var(--colours-surface-dark);
 	text-align: center;
+	position: relative;
+}
+
+.home-hero .waves-bg {
+	/* border: solid 1px orange; */
+	position: relative;
+	width: 100%;
+	height: 40vh;
+	overflow: hidden;
+}
+
+.home-hero .waves-bg svg {
+	/* border: solid 1px green; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 100%;
+	width: auto;
+	z-index: -999;
+}
+
+/* Waves */
+.home-hero .waves-bg svg#home-hero-paths {
+	--edges-mask-gradient: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+	-webkit-mask-image: var(--edges-mask-gradient);
+  	mask-image: var(--edges-mask-gradient);
+}
+
+/* Arrow */
+.home-hero .waves-bg svg#home-hero-arrow {
+	/* border: solid 1px purple; */
+	width: 90%;
+	left: 0;
+	transform: translate(0%,-50%);
+}
+
+/* Text */
+
+.home-hero .flux-name {
+	width: 50%;
+	max-width: 10rem;
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: var(--colours-primary);
+	aspect-ratio: 1/1;
+	border-radius: 1000rem;
+	align-content: center;
+}
+
+.home-hero .text-content {
+	/* border: solid 1px blue; */
+	background: linear-gradient(0deg, var(--colours-surface-light) 25%, rgba(256,256,256,0) 100%);
+	width: 100%;
 }
 
 .home-hero .strapline {
@@ -359,6 +415,16 @@ h1.entry-title {
 /*========================================*/
 /*  MEDIA QUERIES                     */
 /*========================================*/
+
+/*------------------------------------------*/
+/*	Mobile landscape, small tablet          */
+/*------------------------------------------*/
+@media screen and (min-width: 600px) {
+	/*-------- Home Hero --------*/
+	.home-hero .waves-bg {
+		height: 50vh;
+	}
+}
 
 /*-------------------------------*/
 /*	Tablet          			 */

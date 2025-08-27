@@ -10,9 +10,15 @@
 ?>
 
 <section class="home-hero">
-	<h1 class="flux-name">Flux</h1>
-	<p class="strapline">Find your wavelength</p>
-	<p class="description">Info about ADHD for students</p>
+	<div class="waves-bg">
+		<?php echo load_inline_svg('\assets\home-page\home-hero-waves-1.svg')?>
+		<?php echo load_inline_svg('\assets\home-page\home-hero-arrow.svg')?>
+		<h1 class="flux-name">Flux</h1>
+	</div>
+	<div class="text-content">
+		<p class="strapline">Find your wavelength</p>
+		<p class="description">Info about ADHD for students</p>
+	</div>
 </section>
 
 <section class="page-intro">
