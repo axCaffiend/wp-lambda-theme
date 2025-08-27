@@ -222,6 +222,9 @@ function theme_gsap_script(){
 
 	// Motion Path Helper
 	 wp_enqueue_script( 'gsap-mph', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathHelper.min.js', array('gsap-js'), false, true );
+	 
+	//  Morph SVG
+	 wp_enqueue_script( 'gsap-ms', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js', array('gsap-js'), false, true );
 
     // Your animation code file - with gsap.js passed as a dependency
     wp_enqueue_script( 'gsap-test', get_template_directory_uri() . '/js/gsap-test.js', array('gsap-js'), false, true );
